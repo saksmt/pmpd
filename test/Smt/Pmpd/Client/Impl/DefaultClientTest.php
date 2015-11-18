@@ -169,4 +169,19 @@ class DefaultClientTest extends \PHPUnit_Framework_TestCase
         $client = new DefaultClient($connection);
         $client->query('test');
     }
+
+    public function testNullCurrent()
+    {
+        $connection = $this->getMockBuilder(Connection::class)
+            ->disableOriginalConstructor()
+            ->getMock();
+        $connection
+            ->expects($this->once())
+            ->method('send')
+            ->withAnyParameters()
+            ->willReturn(SocketResponse::fromRaw(['OK', ""]))
+        ;
+        $client = new DefaultClient($connection);
+        $this->assertNull($client->getCurrent());
+    }
 }

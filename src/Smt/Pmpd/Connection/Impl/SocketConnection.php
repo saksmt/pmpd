@@ -38,6 +38,7 @@ class SocketConnection implements StatefulConnection
     {
         $this->close();
         $this->configuration = $configuration;
+        return $this;
     }
 
     /** {@inheritdoc} */
@@ -123,8 +124,8 @@ class SocketConnection implements StatefulConnection
      */
     private function prepareCommand($command, $arguments)
     {
-        return $command . ' ' . implode('" "', array_map(function ($argument) {
+        return $command . ' "' . implode('" "', array_map(function ($argument) {
             return str_replace('"', '\\"', $argument);
-        }, $arguments)) . "\n";
+        }, $arguments)) . "\"\n";
     }
 }

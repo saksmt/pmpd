@@ -13,7 +13,8 @@
     "smt/enumeration": "~1"
   },
   "require-dev": {
-    "smt/open-popo": "~1"
+    "smt/open-popo": "~1",
+    "mikey179/vfsStream": "~1"
   },
   "autoload": {
     "psr-4": {
