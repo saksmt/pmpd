@@ -1,0 +1,28 @@
+{
+  "name": "smt/pmpd",
+  "description": "PHP Music Player Daemon control implementation",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Kirill Saksin",
+      "email": "kirillsaksin@yandex.ru"
+    }
+  ],
+  "require": {
+    "php": ">=5.6",
+    "smt/enumeration": "~1"
+  },
+  "require-dev": {
+    "smt/open-popo": "~1"
+  },
+  "autoload": {
+    "psr-4": {
+      "": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "": "test/"
+    }
+  }
+}
