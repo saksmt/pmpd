@@ -7,6 +7,6 @@ namespace Smt\Pmpd\Exception;
  * @package Smt\Pmpd\Exception
  * @author Kirill Saksin <kirillsaksin@yandex.ru>
  */
-class ConnectionException extends \Exception
+abstract class ConnectionException extends \Exception
 {
 }
