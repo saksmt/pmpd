@@ -34,4 +34,48 @@ class StatusTest extends \PHPUnit_Framework_TestCase
 
             ->validate(PopoClass::fromClassName(Status::class));
     }
+
+    /**
+     * @test
+     */
+    public function testRepeat()
+    {
+        $testable = new Status();
+        $this->assertNull($testable->isRepeat());
+        $this->assertEquals($testable, $testable->setRepeat(true));
+        $this->assertTrue($testable->isRepeat());
+    }
+
+    /**
+     * @test
+     */
+    public function testRandom()
+    {
+        $testable = new Status();
+        $this->assertNull($testable->isRandom());
+        $this->assertEquals($testable, $testable->setRandom(true));
+        $this->assertTrue($testable->isRandom());
+    }
+
+    /**
+     * @test
+     */
+    public function testSingle()
+    {
+        $testable = new Status();
+        $this->assertNull($testable->isSingle());
+        $this->assertEquals($testable, $testable->setSingle(true));
+        $this->assertTrue($testable->isSingle());
+    }
+
+    /**
+     * @test
+     */
+    public function testConsume()
+    {
+        $testable = new Status();
+        $this->assertNull($testable->isConsume());
+        $this->assertEquals($testable, $testable->setConsume(true));
+        $this->assertTrue($testable->isConsume());
+    }
 }
