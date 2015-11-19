@@ -49,7 +49,7 @@ Roadmap
 
  - [ ] Implement connection with password;
  - [ ] Write API documentation;
- - [ ] Cover with tests
+ - [X] Cover with tests
  - [ ] Rewrite client to facade with subsystems;
 
 License
