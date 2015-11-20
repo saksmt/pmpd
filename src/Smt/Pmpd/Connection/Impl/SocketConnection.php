@@ -124,6 +124,9 @@ class SocketConnection implements StatefulConnection
      */
     private function prepareCommand($command, $arguments)
     {
+        if (empty($arguments)) {
+            return $command;
+        }
         return $command . ' "' . implode('" "', array_map(function ($argument) {
             return str_replace('"', '\\"', $argument);
         }, $arguments)) . "\"\n";
