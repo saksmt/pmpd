@@ -1,5 +1,4 @@
 <?php
-
 namespace Smt\Pmpd\Entity;
 
 /**
@@ -7,166 +6,82 @@ namespace Smt\Pmpd\Entity;
  * @package Smt\Pmpd\Entity
  * @author Kirill Saksin <kirillsaksin@yandex.ru>
  */
-class Track
+interface Track
 {
-    /**
-     * @var string
-     */
-    private $title;
-
-    /**
-     * @var string
-     */
-    private $artist;
-
-    /**
-     * @var string
-     */
-    private $album;
-
-    /**
-     * @var string
-     */
-    private $genre;
-
-    /**
-     * @var string
-     */
-    private $file;
-
-    /**
-     * @var int
-     */
-    private $date;
-
-    /**
-     * @var int
-     */
-    private $track;
-
     /**
      * @return string
      */
-    public function getTitle()
-    {
-        return $this->title;
-    }
+    public function getTitle();
 
     /**
      * @param string $title Title
      * @return Track This instance
      */
-    public function setTitle($title)
-    {
-        $this->title = $title;
-        return $this;
-    }
+    public function setTitle($title);
 
     /**
      * @return string
      */
-    public function getArtist()
-    {
-        return $this->artist;
-    }
+    public function getArtist();
 
     /**
      * @param string $artist Artist
      * @return Track This instance
      */
-    public function setArtist($artist)
-    {
-        $this->artist = $artist;
-        return $this;
-    }
+    public function setArtist($artist);
 
     /**
      * @return string
      */
-    public function getAlbum()
-    {
-        return $this->album;
-    }
+    public function getAlbum();
 
     /**
      * @param string $album Album
      * @return Track This instance
      */
-    public function setAlbum($album)
-    {
-        $this->album = $album;
-        return $this;
-    }
+    public function setAlbum($album);
 
     /**
      * @return string
      */
-    public function getGenre()
-    {
-        return $this->genre;
-    }
+    public function getGenre();
 
     /**
      * @param string $genre Genre
      * @return Track This instance
      */
-    public function setGenre($genre)
-    {
-        $this->genre = $genre;
-        return $this;
-    }
+    public function setGenre($genre);
 
     /**
      * @return string
      */
-    public function getFile()
-    {
-        return $this->file;
-    }
+    public function getFile();
 
     /**
      * @param string $file File
      * @return Track This instance
      */
-    public function setFile($file)
-    {
-        $this->file = $file;
-        return $this;
-    }
+    public function setFile($file);
 
     /**
      * @return int
      */
-    public function getDate()
-    {
-        return $this->date;
-    }
+    public function getDate();
 
     /**
      * @param int $date Date
      * @return Track This instance
      */
-    public function setDate($date)
-    {
-        $this->date = $date;
-        return $this;
-    }
+    public function setDate($date);
 
     /**
      * @return int
      */
-    public function getTrack()
-    {
-        return $this->track;
-    }
+    public function getTrack();
 
     /**
      * @param int $track Track number
      * @return Track This instance
      */
-    public function setTrack($track)
-    {
-        $this->track = $track;
-        return $this;
-    }
+    public function setTrack($track);
 }

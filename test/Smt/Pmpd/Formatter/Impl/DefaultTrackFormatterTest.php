@@ -2,13 +2,13 @@
 
 namespace Smt\Pmpd\Formatter\Impl;
 
-use Smt\Pmpd\Entity\Track;
+use Smt\Pmpd\Entity\Impl\DefaultTrack;
 
 class DefaultTrackFormatterTest extends \PHPUnit_Framework_TestCase
 {
     public function test()
     {
-        $track = (new Track())
+        $track = (new DefaultTrack())
             ->setAlbum('album')
             ->setArtist('artist')
             ->setDate(2015)
