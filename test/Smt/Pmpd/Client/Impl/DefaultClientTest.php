@@ -6,7 +6,7 @@ use Smt\Pmpd\Connection\Commands;
 use Smt\Pmpd\Connection\Connection;
 use Smt\Pmpd\Entity\Enum\PlaybackState;
 use Smt\Pmpd\Entity\Status;
-use Smt\Pmpd\Entity\Track;
+use Smt\Pmpd\Entity\Impl\DefaultTrack;
 use Smt\Pmpd\Exception\ClientExecutionException;
 use Smt\Pmpd\Exception\ConnectionEstablishmentException;
 use Smt\Pmpd\Response\Impl\SocketResponse;
@@ -74,7 +74,7 @@ class DefaultClientTest extends \PHPUnit_Framework_TestCase
     public function testCurrent()
     {
         $result = $this->testable->getCurrent();
-        $this->assertInstanceOf(Track::class, $result);
+        $this->assertInstanceOf(DefaultTrack::class, $result);
         $this->assertEquals('test', $result->getTitle());
     }
 

@@ -7,7 +7,7 @@ use Smt\Pmpd\Connection\Commands;
 use Smt\Pmpd\Connection\Connection;
 use Smt\Pmpd\Entity\Enum\PlaybackState;
 use Smt\Pmpd\Entity\Status;
-use Smt\Pmpd\Entity\Track;
+use Smt\Pmpd\Entity\Impl\DefaultTrack;
 use Smt\Pmpd\Exception\ClientExecutionException;
 use Smt\Pmpd\Exception\ConnectionException;
 use Smt\Pmpd\Response\FailResponse;
@@ -55,7 +55,7 @@ class DefaultClient implements Client
         if ($response->isEmpty()) {
             return null;
         }
-        return (new Track())
+        return (new DefaultTrack())
             ->setAlbum($response->get('Album'))
             ->setArtist($response->get('Artist'))
             ->setDate($response->get('Date'))
