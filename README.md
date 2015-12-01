@@ -42,6 +42,8 @@ Usage
     } else {
         echo 'Id in playlist:' . $response->get('Id') . PHP_EOL;
     }
+    
+For more see [documentation](https://github.com/saksmt/pmpd/blob/develop/doc)
 
 
 Roadmap
