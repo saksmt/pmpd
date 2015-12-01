@@ -47,7 +47,7 @@ Usage
 Roadmap
 -------
 
- - [ ] Implement connection with password;
+ - [X] Implement connection with password;
  - [ ] Write API documentation;
  - [X] Cover with tests
  - [ ] Rewrite client to facade with subsystems;
