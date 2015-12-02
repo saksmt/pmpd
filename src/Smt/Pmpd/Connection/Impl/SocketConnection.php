@@ -3,9 +3,12 @@
 namespace Smt\Pmpd\Connection\Impl;
 
 use Smt\Pmpd\Configuration\HostConfiguration;
+use Smt\Pmpd\Connection\Commands;
 use Smt\Pmpd\Connection\StatefulConnection;
 use Smt\Pmpd\Exception\ConnectionEstablishmentException;
 use Smt\Pmpd\Exception\ConnectionNotEstablishedException;
+use Smt\Pmpd\Exception\InvalidPasswordException;
+use Smt\Pmpd\Response\FailResponse;
 use Smt\Pmpd\Response\Impl\SocketResponse;
 use Smt\Pmpd\Util\BufferedSocketReader;
 
@@ -89,12 +92,19 @@ class SocketConnection implements StatefulConnection
         return isset($this->socket);
     }
 
+    /**
+     * @throws InvalidPasswordException If password is invalid/incorrect
+     */
     private function authorize()
     {
         if ($this->configuration->getPassword() === null) {
             return;
         }
-        // TODO: write implementation
+        $this->checkConnection();
+        $response = $this->send(Commands::PASSWORD, $this->configuration->getPassword());
+        if ($response instanceof FailResponse) {
+            throw new InvalidPasswordException(ucfirst($response->getMessage()));
+        }
     }
 
     /**

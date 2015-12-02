@@ -49,7 +49,7 @@ For more see [documentation](https://github.com/saksmt/pmpd/blob/develop/doc)
 Roadmap
 -------
 
- - [ ] Implement connection with password;
+ - [X] Implement connection with password;
  - [ ] Write API documentation;
  - [X] Cover with tests
  - [ ] Rewrite client to facade with subsystems;
