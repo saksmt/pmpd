@@ -42,13 +42,15 @@ Usage
     } else {
         echo 'Id in playlist:' . $response->get('Id') . PHP_EOL;
     }
+    
+For more see [documentation](https://github.com/saksmt/pmpd/blob/develop/doc)
 
 
 Roadmap
 -------
 
  - [X] Implement connection with password;
- - [ ] Write API documentation;
+ - [X] Write API documentation;
  - [X] Cover with tests
  - [ ] Rewrite client to facade with subsystems;
 
