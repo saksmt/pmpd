@@ -24,6 +24,8 @@
 
 [`Smt\Pmpd\Exception\ConnectionEstablishmentException`](https://github.com/saksmt/pmpd/blob/develop/doc/base/exceptions/ConnectionEstablishmentException.md) - Thrown on errors while attempting to establish connection
 
+[`Smt\Pmpd\Exception\InvalidPasswordException`](https://github.com/saksmt/pmpd/blob/develop/doc/base/exceptions/InvalidPasswordException) - Thrown when connecting with invalid password
+
 # Low-level
 
 ## Connection
